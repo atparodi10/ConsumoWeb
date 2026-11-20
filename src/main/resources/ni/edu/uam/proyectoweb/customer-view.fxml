@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.proyectoweb.controller.CustomerController"
+      prefWidth="850.0"
+      prefHeight="420.0"
+      spacing="12.0">
+
+    <padding>
+        <Insets top="15.0"
+                right="15.0"
+                bottom="15.0"
+                left="15.0"/>
+    </padding>
+
+    <children>
+
+        <Label text="Consulta de Customers - API Supabase">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="10.0">
+
+            <children>
+
+                <Button fx:id="btnConsultar"
+                        text="Consultar Customers"
+                        onAction="#consultarCustomers"
+                        mnemonicParsing="false"/>
+
+                <Label fx:id="lblEstado"
+                       text="Presione Consultar Customers"/>
+
+            </children>
+
+        </HBox>
+
+        <TableView fx:id="tablaCustomers"
+                   prefHeight="320.0"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="40.0"/>
+
+                <TableColumn fx:id="colFirstName"
+                             text="First Name"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="colLastName"
+                             text="Last Name"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="colEmail"
+                             text="Email"
+                             prefWidth="150.0"/>
+
+                <TableColumn fx:id="colPhone"
+                             text="Phone"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colCountry"
+                             text="Country"
+                             prefWidth="90.0"/>
+
+                <TableColumn fx:id="colCity"
+                             text="City"
+                             prefWidth="90.0"/>
+
+                <TableColumn fx:id="colIncome"
+                             text="Income"
+                             prefWidth="80.0"/>
+
+                <TableColumn fx:id="colStatus"
+                             text="Status"
+                             prefWidth="65.0"/>
+
+            </columns>
+
+            <placeholder>
+                <Label text="No hay contenido"/>
+            </placeholder>
+
+        </TableView>
+
+    </children>
+
+</VBox>
